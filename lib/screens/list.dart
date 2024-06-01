@@ -65,6 +65,21 @@ class _ListScreenState extends State<ListScreen> {
                     });
               },
             ),
+          if (selectedBalloons.isNotEmpty)
+            IconButton(
+              icon: Icon(
+                Icons.update_rounded,
+                color: Theme.of(context).primaryColor,
+              ),
+              onPressed: () {
+                for (var id in selectedBalloons) {
+                  API.updateToToday(id);
+                }
+                setState(() {
+                  selectedBalloons = [];
+                });
+              },
+            ),
         ],
       ),
       body: Column(

@@ -20,7 +20,16 @@ class API {
 
     BalloonModal updatedBalloon = balloon.copyWith(isDone: !balloon.isDone);
 
-    return HiveDB.balloonsBox.put(balloon.id, updatedBalloon.toJson());
+    return update(updatedBalloon);
+  }
+
+  static updateToToday(String balloonId) {
+    BalloonModal balloon =
+        BalloonModal.fromJson(HiveDB.balloonsBox.get(balloonId));
+
+    BalloonModal updatedBalloon = balloon.copyWith(dueDate: DateTime.now());
+
+    return update(updatedBalloon);
   }
 
   static List<BalloonModal> getBalloons() {
