@@ -57,7 +57,7 @@ class _BalloonFormState extends State<BalloonForm> {
         top: widget.balloon?.top ?? 0,
         left: widget.balloon?.left ?? 0,
         createdAt: widget.balloon?.createdAt ?? DateTime.now(),
-        dueDate: widget.balloon?.createdAt ?? DateTime.now(),
+        dueDate: widget.balloon?.dueDate ?? DateTime.now(),
         isDone: widget.balloon?.isDone ?? false,
       );
 
