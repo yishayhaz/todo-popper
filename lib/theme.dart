@@ -7,7 +7,7 @@ final ThemeData theme = ThemeData(
       fontSize: 28,
     ),
     displayMedium: const TextStyle(
-      fontSize: 20,
+      fontSize: 16,
     ),
     displaySmall: const TextStyle(
       fontSize: 12,
